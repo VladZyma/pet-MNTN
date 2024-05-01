@@ -1,0 +1,16 @@
+._main-layout {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+._main {
+  flex: 1 1 auto;
+}
+
+._container {
+  max-width: 147rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
