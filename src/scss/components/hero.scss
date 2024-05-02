@@ -1,0 +1,72 @@
+.hero {
+  padding: 6.4rem 0 100rem;
+
+  background-image: image-set(
+    url('../images/hero.avif') 1x,
+    url('../images/hero@2x.avif') 2x,
+    url('../images/hero.webp') 1x,
+    url('../images/hero@2x.webp') 2x,
+    url('../images/hero.jpg') 1x,
+    url('../images/hero@2x.jpg') 2x
+  );
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__inner {
+    margin: 0 auto 30rem;
+    max-width: 95rem;
+  }
+
+  &__title {
+    margin-bottom: 3.2rem;
+  }
+
+  &__subtitle {
+    margin-bottom: 3.2rem;
+  }
+
+  &__btn {
+    width: 100%;
+    max-width: 12.6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 1.8rem;
+    line-height: 125%;
+    @extend %Gilroy-700;
+
+    background-color: transparent;
+    color: $color-text-default;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: $color-accent;
+      .hero__btn-arrow {
+        fill: $color-accent;
+      }
+    }
+  }
+
+  &__btn-arrow {
+    width: 16px;
+    height: 24px;
+    fill: #fff;
+    transition: all 0.3s ease;
+
+    @include keyframes(arrowUpDown) {
+      0% {
+        transform: translateY(-5px);
+      }
+      50% {
+        transform: translateY(5px);
+      }
+      100% {
+        transform: translateY(-5px);
+      }
+    }
+    @include animate(arrowUpDown, 1s, linear, infinite);
+  }
+}

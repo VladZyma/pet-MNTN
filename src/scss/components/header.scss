@@ -1,0 +1,69 @@
+.header {
+  max-width: 176rem;
+  margin: 0 auto 20rem;
+  background-color: transparent;
+
+  &__nav {
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__nav-list {
+    display: flex;
+    gap: 3.5rem;
+  }
+
+  &__nav-link,
+  &__nav-account-link {
+    &:link,
+    &:visited {
+      padding-bottom: 6px;
+      position: relative;
+
+      line-height: 125%;
+      color: $color-text-default;
+      transition: all 0.3s ease;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 2px;
+
+        background-color: $color-accent;
+        transition: all 0.4s ease;
+      }
+    }
+
+    &:hover,
+    &:active {
+      color: $color-accent;
+
+      &::after {
+        left: 0;
+        right: 0;
+        width: 100%;
+      }
+      .header__nav-account-icon {
+        fill: $color-accent;
+      }
+    }
+  }
+
+  &__nav-account-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__nav-account-icon {
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s ease;
+    fill: $color-text-default;
+  }
+}
