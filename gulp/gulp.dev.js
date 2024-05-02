@@ -128,7 +128,7 @@ function img() {
     .pipe(dest(`./${buildFolder}/images`));
 }
 
-function svg() {
+function svgSprite() {
   return src(`./${srcFolder}/images/**/*.svg`)
     .pipe(changed(`./${buildFolder}/images/**/*.svg`))
     .pipe(
@@ -208,7 +208,7 @@ module.exports = {
   styles,
   scripts,
   img,
-  svg,
+  svgSprite,
   fonts,
   files,
   videos,
