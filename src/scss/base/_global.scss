@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  background-color: $color-bg;
 }
 
 ._main {
@@ -13,4 +14,36 @@
   max-width: 147rem;
   margin: 0 auto;
   padding: 0 1.5rem;
+}
+
+// TITLE
+.title {
+  padding-left: 10.4rem;
+  position: relative;
+
+  font-size: 1.8rem;
+  line-height: 125%;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  @extend %Gilroy-800;
+  color: $color-accent;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 7.2rem;
+    height: 2px;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background-color: $color-accent;
+  }
+}
+
+// SUBTITLE
+.subtitle {
+  font-size: 8.8rem;
+  line-height: 114%;
+  @extend %ChronicleDisplay-600;
+  color: $color-text-default;
 }
