@@ -38,6 +38,10 @@ const svgsprite = require('gulp-svg-sprite');
 const fonter = require('gulp-fonter');
 const ttf2woff2 = require('gulp-ttf2woff2');
 
+// ERRORS AND NOTIFICATIONS
+const plumber = require('gulp-plumber');
+const notify = require('gulp-notify');
+
 function startServer() {
   return src(`./${buildFolder}`).pipe(server({ livereload: true, open: true }));
 }
@@ -68,6 +72,15 @@ function html() {
 function styles() {
   return src([`./${srcFolder}/scss/*.scss`])
     .pipe(changed(`./${buildFolder}/css`))
+    .pipe(
+      plumber({
+        errorHandler: notify.onError({
+          title: 'Styles',
+          message: 'Error <%= error.message %>',
+          sound: false,
+        }),
+      })
+    )
     .pipe(sourceMaps.init())
     .pipe(sassGlob())
     .pipe(sass({ outputStyle: 'expanded' }))
