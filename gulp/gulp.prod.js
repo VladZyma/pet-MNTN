@@ -122,7 +122,7 @@ function img() {
     .pipe(dest(`./${distFolder}/images`));
 }
 
-function svg() {
+function svgSprite() {
   return src(`./${srcFolder}/images/**/*.svg`)
     .pipe(changed(`./${distFolder}/images/**/*.svg`))
     .pipe(
@@ -183,7 +183,7 @@ function watching() {
     [`./${srcFolder}/images/**/*.*`, `!./${srcFolder}/images/**/*.svg`],
     img
   );
-  watch([`./${srcFolder}/images/**/*.svg`], svg);
+  watch([`./${srcFolder}/images/**/*.svg`], svgSprite);
   watch([`./${srcFolder}/fonts/*.*`], fonts);
 }
 
@@ -200,7 +200,7 @@ module.exports = {
   styles,
   scripts,
   img,
-  svg,
+  svgSprite,
   fonts,
   files,
   videos,

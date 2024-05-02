@@ -25,7 +25,7 @@ exports.prod = series(
     gulpProd.styles,
     gulpProd.scripts,
     gulpProd.img,
-    gulpProd.svg,
+    gulpProd.svgSprite,
     gulpProd.fonts,
     gulpProd.files,
     gulpProd.videos
