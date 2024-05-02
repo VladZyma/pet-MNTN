@@ -189,7 +189,7 @@ function watching() {
     [`./${srcFolder}/images/**/*.*`, `!./${srcFolder}/images/**/*.svg`],
     img
   );
-  watch([`./${srcFolder}/images/**/*.svg`], svg);
+  watch([`./${srcFolder}/images/**/*.svg`], svgSprite);
   watch([`./${srcFolder}/fonts/*.*`], fonts);
 }
 
