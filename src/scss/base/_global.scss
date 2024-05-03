@@ -42,8 +42,39 @@
 
 // SUBTITLE
 .subtitle {
-  font-size: 8.8rem;
+  font-size: 6.4rem;
   line-height: 114%;
   @extend %ChronicleDisplay-600;
   color: $color-text-default;
+}
+.subtitle--big {
+  font-size: 8.8rem;
+}
+
+// TEXT
+.text {
+  font-size: 1.8rem;
+  line-height: 177%;
+  @extend %Gilroy-700;
+  color: $color-text-default;
+}
+
+// SECTION LINK
+.section-link {
+  width: 100%;
+  max-width: 12.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 1.8rem;
+  line-height: 125%;
+  @extend %Gilroy-700;
+  color: $color-accent;
+
+  &__icon {
+    width: 24px;
+    height: 16px;
+    fill: $color-accent;
+  }
 }
