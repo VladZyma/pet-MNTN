@@ -3,6 +3,13 @@
   margin: 0 auto 20rem;
   background-color: transparent;
 
+  @media (max-width: 747.8px) {
+    margin: 0 auto 10rem;
+  }
+  @media (max-width: 430.8px) {
+    margin: 0 auto 6rem;
+  }
+
   &__inner {
     padding: 0 1.5rem;
     display: grid;
