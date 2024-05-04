@@ -7,6 +7,7 @@
     padding: 0 1.5rem;
     display: grid;
     grid-template-columns: minmax(min-content, 2fr) 3fr;
+    align-items: center;
   }
 
   &__nav {
