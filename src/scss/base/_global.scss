@@ -78,3 +78,18 @@
     fill: $color-accent;
   }
 }
+
+// FOOTER LIST TITLE & LINK
+.footer-list-title {
+  font-size: 2.4rem;
+  line-height: 133%;
+  @extend %Gilroy-700;
+  color: $color-accent;
+}
+
+.footer-list-link {
+  font-size: 1.8rem;
+  line-height: 177%;
+  @extend %Gilroy-500;
+  color: $color-text-default;
+}
