@@ -3,8 +3,13 @@
   margin: 0 auto 20rem;
   background-color: transparent;
 
-  &__nav {
+  &__inner {
     padding: 0 1.5rem;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+  }
+
+  &__nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
