@@ -92,4 +92,9 @@
   line-height: 177%;
   @extend %Gilroy-500;
   color: $color-text-default;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: $color-accent;
+  }
 }
