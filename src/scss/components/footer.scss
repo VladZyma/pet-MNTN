@@ -1,0 +1,47 @@
+.footer {
+  padding-bottom: 12rem;
+
+  &__raw {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+  }
+
+  &__content {
+    flex: 0 1 35rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__content-logo {
+    margin-bottom: 2.4rem;
+  }
+
+  &__content-text {
+    max-width: 30rem;
+  }
+
+  &__content-copyright {
+    margin-top: auto;
+
+    @extend %Gilroy-500;
+    opacity: 0.5;
+  }
+
+  &_inner-box {
+    flex: 0 1 57rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+  }
+}
+
+.footer-menu {
+  &__title {
+    margin-bottom: 2.4rem;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 1.6rem;
+  }
+}
