@@ -60,9 +60,7 @@
     line-height: 125%;
     @extend %Gilroy-700;
 
-    background-color: transparent;
     color: $color-text-default;
-    cursor: pointer;
     transition: all 0.3s ease;
 
     &:hover {
