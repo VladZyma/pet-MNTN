@@ -47,6 +47,9 @@
       width: 5rem;
     }
   }
+  @media (max-width: 747.8px) {
+    font-size: 1.4rem;
+  }
 }
 
 // SUBTITLE
@@ -55,6 +58,13 @@
   line-height: 114%;
   @extend %ChronicleDisplay-600;
   color: $color-text-default;
+
+  @media (max-width: 1300.8px) {
+    font-size: 3.4rem;
+  }
+  @media (max-width: 747.8px) {
+    font-size: 2.6rem;
+  }
 }
 .subtitle--big {
   font-size: 8.8rem;
@@ -76,6 +86,13 @@
   line-height: 177%;
   @extend %Gilroy-700;
   color: $color-text-default;
+
+  @media (max-width: 1300.8px) {
+    font-size: 1.6rem;
+  }
+  @media (max-width: 747.8px) {
+    font-size: 1.4rem;
+  }
 }
 
 // SECTION LINK
