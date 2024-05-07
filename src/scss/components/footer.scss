@@ -1,16 +1,30 @@
 .footer {
   padding-bottom: 12rem;
 
+  @media (max-width: 747.8px) {
+    padding-bottom: 6rem;
+  }
+
   &__raw {
     display: flex;
     justify-content: space-between;
     gap: 3rem;
+
+    @media (max-width: 747.8px) {
+      flex-wrap: wrap-reverse;
+      justify-content: center;
+      gap: 4rem;
+    }
   }
 
   &__content {
     flex: 0 1 35rem;
     display: flex;
     flex-direction: column;
+
+    @media (max-width: 747.8px) {
+      flex: 0 1 57rem;
+    }
   }
 
   &__content-logo {
@@ -19,6 +33,11 @@
 
   &__content-text {
     max-width: 30rem;
+
+    @media (max-width: 747.8px) {
+      max-width: 100%;
+      margin-bottom: 2.4rem;
+    }
   }
 
   &__content-copyright {
@@ -33,6 +52,10 @@
     display: flex;
     justify-content: space-between;
     gap: 3rem;
+
+    @media (max-width: 430.8px) {
+      flex-wrap: wrap;
+    }
   }
 }
 
@@ -43,5 +66,9 @@
 
   &__item:not(:last-child) {
     margin-bottom: 1.6rem;
+
+    @media (max-width: 747.8px) {
+      margin-bottom: 1rem;
+    }
   }
 }
