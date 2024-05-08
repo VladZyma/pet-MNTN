@@ -50,6 +50,15 @@ function html() {
   return src([`./${srcFolder}/**/*.html`, `!./${srcFolder}/components/*.html`])
     .pipe(changed(`./${buildFolder}`, { hasChanged: changed.compareContents }))
     .pipe(
+      plumber({
+        errorHandler: notify.onError({
+          title: 'HTML',
+          message: 'Error <%= error.message %>',
+          sound: false,
+        }),
+      })
+    )
+    .pipe(
       includeHTML({
         prefix: '@@',
         basepath: '@file',
@@ -92,6 +101,15 @@ function styles() {
 function scripts() {
   return src(`./${srcFolder}/js/*.js`)
     .pipe(changed(`./${buildFolder}/js`))
+    .pipe(
+      plumber({
+        errorHandler: notify.onError({
+          title: 'JavaScript',
+          message: 'Error <%= error.message %>',
+          sound: false,
+        }),
+      })
+    )
     .pipe(babel())
     .pipe(webpack(require('../webpack.config')))
     .pipe(dest(`./${buildFolder}/js`));
