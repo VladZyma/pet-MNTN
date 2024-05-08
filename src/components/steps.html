@@ -26,22 +26,22 @@
 
       <div class="steps__image-box">
         <div class="steps__image-wrapper">
-          <picture class="steps__img">
+          <picture class="steps__img _lazy-img">
             <source
               type="image/avif"
-              srcset="
-                ./images/steps/get-started.avif    1x,
-                ./images/steps/get-started@2x.avif 2x
-              " />
+              srcset="./images/steps/get-started-lazy.jpg"
+              data-srcset="./images/steps/get-started.avif 1x,
+              ./images/steps/get-started@2x.avif 2x" />
             <source
               type="image/webp"
-              srcset="
+              srcset="./image/steps/get-started-lazy.jpg"
+              data-srcset="
                 ./image/steps/get-started.webp    1x,
                 ./image/steps/get-started@2x.webp 2x
               " />
             <img
-              src="./images/steps/get-started.jpg"
-              srcset="./images/steps/get-started@2x.jpg"
+              src="./images/steps/get-started-lazy.jpg"
+              data-src="./images/steps/get-started.jpg"
               alt="step image" />
           </picture>
         </div>
@@ -73,22 +73,24 @@
 
       <div class="steps__image-box">
         <div class="steps__image-wrapper">
-          <picture class="steps__img">
+          <picture class="steps__img _lazy-img">
             <source
               type="image/avif"
-              srcset="
+              srcset="./images/steps/essentials-lazy.jpg"
+              data-srcset="
                 ./images/steps/essentials.avif    1x,
                 ./images/steps/essentials@2x.avif 2x
               " />
             <source
               type="image/webp"
-              srcset="
+              srcset="./images/steps/essentials-lazy.jpg"
+              data-srcset="
                 ./image/steps/essentials.webp    1x,
                 ./image/steps/essentials@2x.webp 2x
               " />
             <img
-              src="./images/steps/essentials.jpg"
-              srcset="./images/steps/essentials@2x.jpg"
+              src="./images/steps/essentials-lazy.jpg"
+              data-src="./images/steps/essentials.jpg"
               alt="step image" />
           </picture>
         </div>
@@ -120,22 +122,24 @@
 
       <div class="steps__image-box">
         <div class="steps__image-wrapper">
-          <picture class="steps__img">
+          <picture class="steps__img _lazy-img">
             <source
               type="image/avif"
-              srcset="
+              srcset="./images/steps/key-lazy.jpg"
+              data-srcset="
                 ./images/steps/key.avif    1x,
                 ./images/steps/key@2x.avif 2x
               " />
             <source
               type="image/webp"
-              srcset="
+              srcset="./images/steps/key-lazy.jpg"
+              data-srcset="
                 ./image/steps/key.webp    1x,
                 ./image/steps/key@2x.webp 2x
               " />
             <img
-              src="./images/steps/key.jpg"
-              srcset="./images/steps/key@2x.jpg"
+              src="./images/steps/key-lazy.jpg"
+              data-src="./images/steps/key.jpg"
               alt="step image" />
           </picture>
         </div>
