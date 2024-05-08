@@ -20,6 +20,10 @@
   overflow-y: hidden;
 }
 
+._lazy-img {
+  filter: blur(5px);
+}
+
 // TITLE
 .title {
   padding-left: 10.4rem;
